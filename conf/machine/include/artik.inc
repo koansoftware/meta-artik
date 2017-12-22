@@ -7,7 +7,10 @@ PREFERRED_PROVIDER_virtual/kernel ?= "linux-yocto-artik"
 MACHINE_FEATURES += " bluetooth pci rtc ethernet serial usbgadget wifi"
 
 KERNEL_IMAGETYPE = "zImage"
-IMAGE_FSTYPES += "tar.bz2 ext4 artik-sdimg"
+
+# Comment it out until sdimg creation error  will be solved
+#IMAGE_FSTYPES += "tar.bz2 ext4 artik-sdimg"
+IMAGE_FSTYPES += "tar.bz2 ext4"
 
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "bcm4354-bt bcm4354-nvram-config"
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "kernel-modules"
